@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "626257018314",
+    "firebase_url": "https://myuas-dc003.firebaseio.com",
+    "project_id": "myuas-dc003",
+    "storage_bucket": "myuas-dc003.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:626257018314:android:9b8ea21ad9e25395df2333",
+        "android_client_info": {
+          "package_name": "com.example.legalisir"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "626257018314-8fmcr4ufedmeoe8itv38tgd8347s484i.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.legalisir",
+            "certificate_hash": "c1d8bc6c58af4a701e0515d436ed4f6bdce0505e"
+          }
+        },
+        {
+          "client_id": "626257018314-hmhue8au3ephdj77mbmg0c6d9cjamskh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDTaJ88Wx6DxmLu3HYoHeTjtYNHkOkSH2g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "626257018314-hmhue8au3ephdj77mbmg0c6d9cjamskh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

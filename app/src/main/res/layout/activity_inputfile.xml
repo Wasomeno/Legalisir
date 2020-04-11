@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_load_page"
+    android:gravity="center"
+    tools:context=".input_file">
+<ImageView
+    android:id="@+id/input_image"
+    android:padding="40dp"
+    android:src="@android:color/black"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"/>
+<ImageButton
+    android:id="@+id/file_button"
+    android:layout_below="@id/input_image"
+    android:background="@null"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:src="@drawable/input_btn"
+    />
+    <ImageButton
+        android:id="@+id/file_submit"
+        android:layout_margin="10pt"
+        android:layout_below="@id/file_button"
+        android:background="@null"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/input_btn_submit"
+        />
+</RelativeLayout>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/ic_load_page"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".InputLegalisir">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <ImageView
+        android:layout_marginTop="10pt"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/title"/>
+        <RelativeLayout
+            android:layout_margin="8pt"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/textJumlah"
+            android:layout_margin="2pt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="25dp"
+            android:textColor="@color/cardview_light_background"
+            android:text="Jumlah Legalisir"/>
+        <EditText
+            android:layout_below="@id/textJumlah"
+            android:layout_width="750px"
+            android:layout_height="150px"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_margin="5pt"
+                android:id="@+id/textAmbil"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="25dp"
+                android:textColor="@color/cardview_light_background"
+                android:text="Pilihan Pengambilan"/>
+        <RadioGroup
+            android:layout_below="@id/textAmbil"
+            android:layout_width="600px"
+            android:layout_height="200px">
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:text="Jasa Kurir"/>
+            <RadioButton
+                android:textSize="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Diambil Ditempat"/>
+        </RadioGroup>
+        </RelativeLayout>
+        <ImageButton
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="10pt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:src="@drawable/input_btn_2"/>
+    </LinearLayout>
+
+</RelativeLayout>
