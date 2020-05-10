@@ -40,6 +40,7 @@ class Register : AppCompatActivity() {
                 OnCompleteListener<AuthResult?> { task ->
                     if (task.isSuccessful) {
                         val user: FirebaseUser? = auth.getCurrentUser()
+                        Toast.makeText(baseContext, "Registrasi Berhasil", Toast.LENGTH_SHORT).show()
                         updateUI(user)
                     } else {
                         Toast.makeText(baseContext, "Registrasi Gagal",

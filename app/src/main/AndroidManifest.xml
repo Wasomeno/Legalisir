@@ -14,17 +14,25 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Register"></activity>
+        <activity android:name=".pengiriman_Pembayaran"></activity>
+        <activity android:name=".pembayaran_Tujuan" />
+        <activity android:name=".detail_Pengambilan" />
+        <activity android:name=".detail_Pengiriman" />
+        <activity
+            android:name=".bottomNav"
+            android:label="@string/title_activity_bottom_nav" />
+        <activity android:name=".Register" />
         <activity
             android:name=".InputLegalisir"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".input_file" />
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".MainActivity" />
         <activity
             android:name=".Splash"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

@@ -7,6 +7,7 @@ import android.net.Uri
 import android.os.Bundle
 import android.provider.MediaStore
 import android.widget.ImageButton
+import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.gms.tasks.Continuation
@@ -15,6 +16,7 @@ import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.StorageReference
 import com.google.firebase.storage.UploadTask
+import kotlinx.android.synthetic.main.activity_inputfile.*
 import java.io.IOException
 import java.util.*
 
@@ -42,7 +44,7 @@ class input_file : AppCompatActivity() {
             intent.type = "image/*"
             intent.action = Intent.ACTION_GET_CONTENT
             startActivityForResult(
-                Intent.createChooser(intent, "Select Picture"),
+                Intent.createChooser(intent, "Pilih Gambar"),
                 PICK_IMAGE_REQUEST
             )
         }
@@ -59,6 +61,7 @@ class input_file : AppCompatActivity() {
             filePath = data.data
             try {
                 val bitmap = MediaStore.Images.Media.getBitmap(contentResolver, filePath)
+                input_image.setImageBitmap(bitmap)
             } catch (e: IOException) {
                 e.printStackTrace()
             }
@@ -87,7 +90,7 @@ class input_file : AppCompatActivity() {
 
             }
         }else{
-            Toast.makeText(this, "Please Upload an Image", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Silahkan Upload Filenya", Toast.LENGTH_SHORT).show()
         }
     }
     private fun addUploadRecordToDb(uri: String){
@@ -99,11 +102,13 @@ class input_file : AppCompatActivity() {
         db.collection("posts")
             .add(data)
             .addOnSuccessListener { documentReference ->
-                val intent = Intent(this, input_file::class.java)
+                val intent = Intent(this, InputLegalisir::class.java)
                 startActivity(intent)
                 Toast.makeText(this, "Upload Berhasil", Toast.LENGTH_LONG).show()
             }
             .addOnFailureListener { e ->
+                val intent = Intent(this, input_file::class.java)
+                startActivity(intent)
                 Toast.makeText(this, "Upload Gagal", Toast.LENGTH_LONG).show()
             }
     }

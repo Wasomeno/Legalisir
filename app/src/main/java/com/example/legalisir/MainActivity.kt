@@ -35,9 +35,12 @@ class MainActivity : AppCompatActivity() {
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
                     val user = auth.currentUser
+                    Toast.makeText(baseContext, "Selamat Datang",
+                        Toast.LENGTH_SHORT).show()
                     updateUI(user)
+
                 } else {
-                    Toast.makeText(baseContext, "Authentication failed.",
+                    Toast.makeText(baseContext, "Password Atau Email Salah",
                         Toast.LENGTH_SHORT).show()
                     updateUI(null)
                 }

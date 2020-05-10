@@ -30,6 +30,7 @@
             android:textColor="@color/cardview_light_background"
             android:text="Jumlah Legalisir"/>
         <EditText
+            android:id="@+id/detail_Jumlah"
             android:layout_below="@id/textJumlah"
             android:layout_width="750px"
             android:layout_height="150px"/>
@@ -47,6 +48,7 @@
                 android:textColor="@color/cardview_light_background"
                 android:text="Pilihan Pengambilan"/>
         <RadioGroup
+            android:id="@+id/radio_Pengambilan"
             android:layout_below="@id/textAmbil"
             android:layout_width="600px"
             android:layout_height="200px">
@@ -63,6 +65,7 @@
         </RadioGroup>
         </RelativeLayout>
         <ImageButton
+            android:id="@+id/input_detail"
             android:layout_gravity="center_horizontal"
             android:layout_margin="10pt"
             android:layout_width="wrap_content"
